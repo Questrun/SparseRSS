@@ -1,0 +1,15 @@
+app="sparserss";
+address="de/shandschuh";
+target="19";
+tools="28.0.0";
+variant="test";
+proj=$(pwd);
+home="/home/username";
+plat="$home/AndroidSdk/platforms/android-$target/android.jar";
+sdk="$home/AndroidSdk/build-tools/$tools";
+$sdk/aapt package -v -f -m -S $proj/src/res -J $proj/src/java -M $proj/src/AndroidManifest.xml -I $plat;
+javac -verbose -d $proj/compiled/ -classpath $plat -sourcepath $proj/src/java $proj/src/java/$address/$app/*.java;
+$sdk/dx --dex --verbose --output=$proj/obj/classes.dex $proj/compiled;
+$sdk/aapt package -v -f -M $proj/src/AndroidManifest.xml -S $proj/src/res/ -I $plat -F $proj/bin/output$variant.apk $proj/obj;
+jarsigner -verbose -keystore ~/AndroidStudioProjects/alpha/AndroidTest.keystore -storepass minux6 -keypass minux6 -signedjar $proj/bin/jar-sign$variant.apk $proj/bin/output$variant.apk AndroidTestKey;
+~/AndroidSdk/build-tools/28.0.0/apksigner sign --ks $proj/AndroidTest.keystore --ks-key-alias AndroidTestKey --ks-pass pass:minux6 --key-pass pass:minux6  --out $proj/bin/final$variant.apk $proj/bin/jar-sign$variant.apk
