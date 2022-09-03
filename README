@@ -1,9 +1,9 @@
 Sparse rss Android Application Restored
 
-Android 4.4 Compatible APK in <a href="https://github.com/Zokemore/SparseRSS/releases">Release</a>
+Android 4.4 Compatible APK in [Release](https://github.com/Zokemore/SparseRSS/releases)
 Tested on Android 4.4 KitKat(19)
 Supported API: Android 3-19
-Build using <a href="https://github.com/Zokemore/AndroidBuildSnippet">AndroiD Build Snippet</a>
+Build using [AndroiD Build Snippet](https://github.com/Zokemore/AndroidBuildSnippet)
 If you find the released apk working on other devicesas well, kindly create issue(let me know) or update README(pull request)
 
 Copyright (c) 2010-2012 Stefan Handschuh
