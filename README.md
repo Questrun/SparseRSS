@@ -7,8 +7,10 @@ Build using [AndroiD Build Snippet](https://github.com/Zokemore/AndroidBuildSnip
 If you find the released apk working on other devicesas well, kindly create issue(let me know) or update README(pull request)
 
 Copyright (c) 2010-2012 Stefan Handschuh
+
 Code-Contributors
  - Joel Low
+ 
 Translators
  - Dutch: Eelko Berkenpies
  - Spanish: Sergio Martín
